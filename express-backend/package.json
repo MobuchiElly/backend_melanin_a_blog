@@ -1,0 +1,33 @@
+{
+  "name": "amarachis_blog",
+  "version": "1.0.0",
+  "description": "REST API for blog application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "vercel-build": "echo hello"
+  },
+  "author": "Buchi",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cloudinary": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.1",
+    "express-async-errors": "^3.1.1",
+    "express-rate-limit": "^7.2.0",
+    "form-data": "^4.0.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mailgun.js": "^10.2.1",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.2.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.0",
+    "xss-clean": "^0.1.4"
+  }
+}
