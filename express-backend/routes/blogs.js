@@ -17,7 +17,7 @@ const upload = require("../middleware/multer");
 
 // routes
 router.route("/").get(getAllPosts).post(authmiddleware, adminmiddleware, createPost);
-router.route("/:postId").get(usermiddleware, getPost);
+router.route("/:postId").get(getPost);
 router.route("/:postId").patch(authmiddleware, adminmiddleware, editPost).delete(authmiddleware,adminmiddleware, deletePost);
 router.route("/:postId/likes").post(authmiddleware,addLike).delete(authmiddleware, deleteLike);
 

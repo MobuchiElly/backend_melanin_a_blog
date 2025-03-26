@@ -103,14 +103,14 @@ const getAllPosts = async (req, res) => {
 
 const getPost = async (req, res) => {
   const { postId } = req.params;
-  const userId = req?.user?.userId || null;
+  const {uid} = req.query;
   
   const singlePost = await Post.findById(postId).populate("comments").exec();
   if (!singlePost) {
-    throw new NotFound(`No post with id ${id}`);
+    throw new NotFound(`No post with id ${userId}`);
   }
   const totalLikes = singlePost.likes.length;
-  const isLiked = userId ?  singlePost.likes.includes(userId) : false;
+  const isLiked = uid ?  singlePost.likes.includes(uid) : false;
   const data = singlePost.toObject();
   delete data.likes;
   
